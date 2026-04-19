@@ -4,7 +4,7 @@ backend:
   branch: main
   site_domain: rustybytes.dewood.eu
   base_url: https://decap.dewood.eu
-  auth_endpoint: api/auth
+  auth_endpoint: auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
