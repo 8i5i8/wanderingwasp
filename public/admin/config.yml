@@ -2,8 +2,8 @@ backend:
   name: github
   repo: 8i5i8/wanderingwasp
   branch: main
-  base_url: https://decap.dewood.eu
-  auth_endpoint: api/auth
+  base_url: https://rustybytes.dewood.eu
+  auth_endpoint: auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
