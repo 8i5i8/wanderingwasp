@@ -8,3 +8,5 @@ draft: false
 We got there.
 
 Now I can created/edit *new* posts without using github and commits. Hopefully also using a phone.
+
+![Step one of many](/uploads/ste1.jpg)
