@@ -36,7 +36,7 @@ const recentPosts = (await getCollection('blog'))
     <ul>
       {recentPosts.map((post) => (
         <li>
-          <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+          <a href={`/blog/${post.id}/`}>{post.data.title}</a>
           <time>{post.data.pubDate.toDateString()}</time>
         </li>
       ))}
