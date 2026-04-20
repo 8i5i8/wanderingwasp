@@ -3,6 +3,13 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Fetch all posts, sort newest first, and grab the top 3
+const recentPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
 <!doctype html>
@@ -20,10 +27,21 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				I'm a complete novice so if you want to explore that, please go take a look (then come back here).
 			</p>
 			<p>
-				Like most new bloggers, I hope to post regularly, but probably won't. Take it or leave it.
+				Like most new bloggers, I hope to post regularly, but probably won't. 
+				Take it or leave it.
 			</p>
 			<p>
-				
+				<section class="recent-posts">
+    <h2>Recent Posts</h2>
+    <ul>
+      {recentPosts.map((post) => (
+        <li>
+          <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+          <time>{post.data.pubDate.toDateString()}</time>
+        </li>
+      ))}
+    </ul>
+  </section>
 		</main>
 		<Footer />
 	</body>
