@@ -1,0 +1,20 @@
+/* Decap CMS mobile improvements */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 16px !important;
+  }
+
+  .css-1f7nhiq,
+  .css-1hvrxoj,
+  [role='textbox'] {
+    min-height: 200px;
+  }
+}
