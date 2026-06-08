@@ -12,9 +12,34 @@
     font-size: 16px !important;
   }
 
-  .css-1f7nhiq,
-  .css-1hvrxoj,
   [role='textbox'] {
     min-height: 200px;
+  }
+
+  /* Media library modal */
+  [role='dialog'] {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    height: 90vh !important;
+    max-height: 90vh !important;
+    margin: 0 auto !important;
+  }
+
+  /* Stack toolbar buttons instead of letting them overflow */
+  [role='dialog'] button {
+    white-space: normal !important;
+  }
+
+  /* Smaller image cards so more fit on screen */
+  [role='dialog'] img {
+    max-height: 140px !important;
+    object-fit: cover !important;
+  }
+
+  /* Prevent horizontal scrolling */
+  [role='dialog'],
+  [role='dialog'] * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
